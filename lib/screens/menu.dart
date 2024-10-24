@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart'; // Import just_audio package.
 import 'breathing_exercise_component.dart'; // Import Breathing Exercise.
 import 'about_screen.dart'; // Import About Screen.
-import 'home_screen.dart'; // Import Home Screen.
 import 'audio_screen.dart'; // Import Audio Screen.
 import 'meditation_screen.dart'; // Import Meditation Screen.
 import 'affirmations_screen.dart'; // Import Affirmations Screen.
@@ -60,11 +59,6 @@ class _MenuState extends State<Menu> {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
-              onTap: () => _navigateTo(const HomeScreen()),
-            ),
-            ListTile(
               leading: const Icon(Icons.self_improvement),
               title: const Text('Breathing Exercise'),
               onTap: () => _navigateTo(const BreathingExerciseComponent()),
@@ -93,7 +87,27 @@ class _MenuState extends State<Menu> {
           ],
         ),
       ),
-      body: const HomeScreen(), // Default body is Home Screen.
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Welcome to Calmify',
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: Colors.lightBlueAccent,
+              ),
+            ),
+            SizedBox(height: 20),
+            Icon(
+              Icons.self_improvement,
+              size: 100,
+              color: Colors.lightBlueAccent,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
