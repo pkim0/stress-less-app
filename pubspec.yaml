@@ -1,0 +1,42 @@
+name: stress_relief_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  just_audio: ^0.9.32
+
+  # Add the sqflite dependency for SQLite database support
+  sqflite: ^2.0.0+3
+
+  # Add the path dependency to assist in managing file paths
+  path: ^1.8.0
+
+  # The following adds the Cupertino Icons font to your application.
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Linting and code style
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Assets used in your application
+  assets:
+    - assets/sounds/rain.mp3
+    - assets/sounds/forest.mp3
+    - assets/sounds/ocean.mp3
+    - assets/sounds/morning.mp3
+    - assets/sounds/evening.mp3
+    - assets/sounds/focus.mp3
