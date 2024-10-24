@@ -29,34 +29,52 @@ class _AudioScreenState extends State<AudioScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text(
-            'Soundscapes',
-            style: TextStyle(
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
-              color: Colors.lightBlueAccent,
+    return Container(
+      color: Colors.white, // Set the background color to white.
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'Soundscapes',
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: Colors.lightBlueAccent,
+              ),
             ),
-          ),
-          const SizedBox(height: 40),
-          ElevatedButton(
-            onPressed: () => playSound('assets/sounds/rain.mp3'),
-            child: const Text('Rain Sound'),
-          ),
-          const SizedBox(height: 10),
-          ElevatedButton(
-            onPressed: () => playSound('assets/sounds/forest.mp3'),
-            child: const Text('Forest Sound'),
-          ),
-          const SizedBox(height: 10),
-          ElevatedButton(
-            onPressed: () => playSound('assets/sounds/ocean.mp3'),
-            child: const Text('Ocean Sound'),
-          ),
-        ],
+            const SizedBox(height: 40),
+            ElevatedButton(
+              onPressed: () => playSound('assets/sounds/rain.mp3'),
+              child: const Text('Rain Sound'),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () => playSound('assets/sounds/forest.mp3'),
+              child: const Text('Forest Sound'),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () => playSound('assets/sounds/ocean.mp3'),
+              child: const Text('Ocean Sound'),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () => playSound('assets/sounds/fireplace.mp3'),
+              child: const Text('Fireplace Sound'),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () => playSound('assets/sounds/birds.mp3'),
+              child: const Text('Birds Sound'),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () => playSound('assets/sounds/wind.mp3'),
+              child: const Text('Wind Sound'),
+            ),
+          ],
+        ),
       ),
     );
   }
