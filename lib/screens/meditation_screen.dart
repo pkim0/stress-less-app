@@ -15,6 +15,7 @@ class _MeditationScreenState extends State<MeditationScreen> {
   bool _isPlaying = false; // Track play/pause state.
   double _progress = 0.0; // Progress of the audio (0 to 1).
   int _remainingTime = 0; // Track remaining session time.
+  String? _currentSession; // Track the current session audio path.
 
   // List of meditation tips.
   final List<String> meditationTips = [
@@ -48,10 +49,16 @@ class _MeditationScreenState extends State<MeditationScreen> {
 
   // Start playing a meditation session.
   Future<void> startSession(String audioPath, int duration) async {
+    if (_currentSession != null) {
+      _timer?.cancel();
+      _player.stop();
+    }
+
     setState(() {
       _progress = 0.0;
       _remainingTime = duration;
       _isPlaying = true;
+      _currentSession = audioPath;
     });
 
     await _player.setAsset(audioPath);
@@ -66,6 +73,7 @@ class _MeditationScreenState extends State<MeditationScreen> {
           _timer?.cancel();
           _player.stop();
           _isPlaying = false;
+          _currentSession = null;
         }
       });
     });
@@ -76,7 +84,33 @@ class _MeditationScreenState extends State<MeditationScreen> {
     setState(() {
       _isPlaying = !_isPlaying;
     });
-    _isPlaying ? _player.play() : _player.pause();
+    if (_isPlaying) {
+      _player.play();
+      _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+        setState(() {
+          if (_remainingTime > 1) {
+            _remainingTime--;
+            _progress += 1 / _remainingTime;
+          } else {
+            _timer?.cancel();
+            _player.stop();
+            _isPlaying = false;
+            _currentSession = null;
+          }
+        });
+      });
+    } else {
+      _player.pause();
+      _timer?.cancel();
+    }
+  }
+
+  // Resume the current session.
+  void resumeSession() {
+    setState(() {
+      _isPlaying = true;
+    });
+    _player.play();
   }
 
   @override
@@ -165,7 +199,7 @@ class _MeditationScreenState extends State<MeditationScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            if (_isPlaying)
+            if (_isPlaying || _remainingTime > 0)
               Column(
                 children: [
                   Text(
