@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-class BreathingExerciseComponent extends StatefulWidget {
-  const BreathingExerciseComponent({super.key});
+class BreathingExerciseScreen extends StatefulWidget {
+  const BreathingExerciseScreen({super.key});
 
   @override
-  _BreathingExerciseComponentState createState() =>
-      _BreathingExerciseComponentState();
+  BreathingExerciseScreenState createState() =>
+      BreathingExerciseScreenState();
 }
 
-class _BreathingExerciseComponentState
-    extends State<BreathingExerciseComponent> with SingleTickerProviderStateMixin {
+class BreathingExerciseScreenState
+    extends State<BreathingExerciseScreen> with SingleTickerProviderStateMixin {
   late Timer _timer;
   String _breathState = "Inhale";
   int _counter = 5;

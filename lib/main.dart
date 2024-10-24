@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'screens/splash_screen.dart'; // Import the splash screen.
 import 'screens/login_page.dart'; // Import the login page.
 
 void main() {

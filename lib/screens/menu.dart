@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart'; // Import just_audio package.
-import 'breathing_exercise_component.dart'; // Import Breathing Exercise.
+import 'breathing_exercise_screen.dart'; // Import Breathing Exercise.
 import 'about_screen.dart'; // Import About Screen.
 import 'audio_screen.dart'; // Import Audio Screen.
 import 'meditation_screen.dart'; // Import Meditation Screen.
@@ -61,12 +61,7 @@ class _MenuState extends State<Menu> {
             ListTile(
               leading: const Icon(Icons.self_improvement),
               title: const Text('Breathing Exercise'),
-              onTap: () => _navigateTo(const BreathingExerciseComponent()),
-            ),
-            ListTile(
-              leading: const Icon(Icons.info),
-              title: const Text('About'),
-              onTap: () => _navigateTo(const AboutScreen()),
+              onTap: () => _navigateTo(const BreathingExerciseScreen()),
             ),
             ListTile(
               leading: const Icon(Icons.audiotrack),
@@ -83,6 +78,11 @@ class _MenuState extends State<Menu> {
               title: const Text('Meditation'),
               onTap: () => _navigateTo(
                   const MeditationScreen()), // Navigate to Meditation Screen.
+            ),
+            ListTile(
+              leading: const Icon(Icons.info),
+              title: const Text('About'),
+              onTap: () => _navigateTo(const AboutScreen()),
             ),
           ],
         ),
