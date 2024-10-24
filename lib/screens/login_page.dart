@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../helpers/database_helper.dart'; // Import the DatabaseHelper class from the helpers folder.
-import 'soundscapes_screen.dart'; // Import the main app screen.
+import 'menu.dart'; // Import the main menu screen.
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => const SoundScapeScreen(),
+            builder: (context) => const Menu(),
           ),
         );
       } else {
@@ -114,11 +114,11 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  // Navigate to the main SoundScapeScreen.
+                  // Navigate to the main MenuScreen.
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SoundScapeScreen(),
+                      builder: (context) => const Menu(),
                     ),
                   );
                 },

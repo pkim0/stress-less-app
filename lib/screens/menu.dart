@@ -7,14 +7,14 @@ import 'audio_screen.dart'; // Import Audio Screen.
 import 'meditation_screen.dart'; // Import Meditation Screen.
 import 'affirmations_screen.dart'; // Import Affirmations Screen.
 
-class SoundScapeScreen extends StatefulWidget {
-  const SoundScapeScreen({super.key});
+class Menu extends StatefulWidget {
+  const Menu({super.key});
 
   @override
-  State<SoundScapeScreen> createState() => _SoundScapeScreenState();
+  State<Menu> createState() => _MenuState();
 }
 
-class _SoundScapeScreenState extends State<SoundScapeScreen> {
+class _MenuState extends State<Menu> {
   final AudioPlayer _player = AudioPlayer(); // Audio player instance.
 
   @override
