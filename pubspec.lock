@@ -193,7 +193,11 @@ packages:
     source: hosted
     version: "1.15.0"
   path:
+<<<<<<< HEAD
     dependency: "direct main"
+=======
+    dependency: transitive
+>>>>>>> 3dd650f05497da290936f7dd181caaf576e9e5a1
     description:
       name: path
       sha256: "087ce49c3f0dc39180befefc60fdb4acd8f8620e5682fe2476afd0b3688bb4af"
@@ -293,6 +297,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.0"
+<<<<<<< HEAD
   sqflite:
     dependency: "direct main"
     description:
@@ -333,6 +338,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.0"
+=======
+>>>>>>> 3dd650f05497da290936f7dd181caaf576e9e5a1
   stack_trace:
     dependency: transitive
     description:
@@ -357,6 +364,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+<<<<<<< HEAD
   synchronized:
     dependency: transitive
     description:
@@ -365,6 +373,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.0+3"
+=======
+>>>>>>> 3dd650f05497da290936f7dd181caaf576e9e5a1
   term_glyph:
     dependency: transitive
     description:
