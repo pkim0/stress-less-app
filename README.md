@@ -1,16 +1,5 @@
 # stress_relief_app
 
-A new Flutter project.
+https://youtu.be/eyxmBlrMFKo (Presentation video)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://docs.google.com/presentation/d/1YzihyTbI884FiNFjRbCpE1RK9N8k-Jwi_uDnZulsT7Y/edit?usp=sharing (PowerPoint slides)
